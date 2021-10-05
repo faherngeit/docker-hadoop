@@ -29,7 +29,7 @@ var = 0
 for line in sys.stdin:
     price = custom_parser(line)
     if price is not None:
-        mean = (count * mean + price) / (count + 1)
         var = (count * var) / (count + 1) + count * ((mean - price) / (count + 1)) ** 2
+        mean = (count * mean + price) / (count + 1)
         count = count + 1
 print('%s, %s, %s' % (mean, var, count))
