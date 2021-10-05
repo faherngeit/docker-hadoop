@@ -1,0 +1,17 @@
+hdfs dfs -mkdir /some_folder
+hdfs dfs -mkdir /some_folder/internal_folder
+hdfs dfs -touchz /some_folder/internal_folder/empty_file
+#
+hdfs dfs -rm -skipTrash /some_folder/internal_folder/empty_file
+hdfs dfs -rm -r -skipTrash /some_folder
+
+hdfs dfs -put AB_NYC_2019.csv /some_folder/
+hdfs dfs -cat /some_folder/AB_NYC_2019.csv
+hdfs dfs -tail /some_folder/AB_NYC_2019.csv
+hdfs dfs -cat /some_folder/AB_NYC_2019.csv | head -n 10
+hdfs dfs -cp /some_folder/AB_NYC_2019.csv /some_folder/another.csv
+
+time hdfs dfs -setrep -w 2 /some_folder/another.csv # ~4 sec
+time hdfs dfs -setrep -w 3 /some_folder/another.csv # ~13 sec
+
+hdfs fsck /  -files
