@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""mapper_mean.py"""
+"""mapper_var.py"""
 
 import sys
 
@@ -25,9 +25,11 @@ def custom_parser(line, id=9):
 
 mean = 0
 count = 0
+var = 0
 for line in sys.stdin:
     price = custom_parser(line)
     if price is not None:
-        mean = (mean * count + price) / (count + 1)
+        mean = (count * mean + price) / (count + 1)
+        var = (count * var) / (count + 1) + count * ((mean - price) / (count + 1)) ** 2
         count = count + 1
-print('%s, %s' % (mean, count))
+print('%s, %s, %s' % (mean, var, count))
