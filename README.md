@@ -1,4 +1,8 @@
-[![Gitter chat](https://badges.gitter.im/gitterHQ/gitter.png)](https://gitter.im/big-data-europe/Lobby)
+# Completed first Home Assignment
+This repo represents completed first home assignment dedicated to HDFS and MapReduce implementaton and BigData ML in MADE. 
+
+
+<!-- [![Gitter chat](https://badges.gitter.im/gitterHQ/gitter.png)](https://gitter.im/big-data-europe/Lobby)
 
 # Changes
 
@@ -60,4 +64,4 @@ The available configurations are:
 * /etc/hadoop/kms-site.xml KMS_CONF
 * /etc/hadoop/mapred-site.xml  MAPRED_CONF
 
-If you need to extend some other configuration file, refer to base/entrypoint.sh bash script.
+If you need to extend some other configuration file, refer to base/entrypoint.sh bash script. -->
