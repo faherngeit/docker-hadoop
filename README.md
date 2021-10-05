@@ -1,6 +1,22 @@
 # Completed first Home Assignment
 This repo represents completed first home assignment dedicated to HDFS and MapReduce implementaton and BigData ML in MADE. 
 
+Under  howework several documents has been changed:
+First of all ```docker.yaml``` was changed. 
+
+1. List of CLI command is presented in  ``` CLI commands.txt ``` file
+
+2. Set of screenshots are collected in corresponding folder``` screenshots ```
+3. MapReduce source code: ```mapper_mean.py```, ```reducer_mean,py```, ```mapper_var.py```, ```reducer_var.py```. 
+4. MapReduce calculation was started as
+```
+mapred -streaming -input /some_folder/AB_NYC_2019.csv -output /some_folder/meanres -mapper mapper_mean.py \
+-reducer reducer_mean.py -file /scrp/mapper_mean.py -file /scrp/reducer_mean.py
+```
+All result are collected in ```test_pandas.ipynb```
+
+Also I have to use shell script ```install_python.sh``` discused in Discord chanel for automatic python installation on all nodes. Finally, I was able to establish MapReduce on both MacOS and Ubuntu. 
+
 
 <!-- [![Gitter chat](https://badges.gitter.im/gitterHQ/gitter.png)](https://gitter.im/big-data-europe/Lobby)
 
